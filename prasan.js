@@ -3,10 +3,7 @@ var base_url;
 if (typeof document.dev_env != "undefined") {
   base_url = document.dev_env;
 }
-else {
-  //get resources off of github to not inflate the jsdelivr stats
-  base_url = "https://raw.githubusercontent.com/ading2210/edpuzzle-answers/main";
-}
+
 
 function http_get(url, callback, headers=[], method="GET", content=null) {
   var request = new XMLHttpRequest();
@@ -153,12 +150,9 @@ function openPopup(assignment) {
       get_tag("script", base_url+"/app/videooptions.js");
       get_tag("script", base_url+"/app/videospeed.js");
     </script>
-    <title>Answers for: ${media.title}</title>
+    <title>Prasan's | Edpuzzle Solver</title>
   </head>
   <div id="header_div">
-    <div>
-      <img src="${thumbnail}" height="108px">
-    </div>
     <div id="title_div">
       <p style="font-size: 16px"><b>${media.title}</b></h2>
       <p style="font-size: 12px">Uploaded by ${media.user.name} on ${date.toDateString()}</p>
