@@ -154,9 +154,6 @@ function openPopup(assignment) {
   </head>
   <div id="header_div">
     <div id="title_div">
-      <p style="font-size: 16px"><b>${media.title}</b></h2>
-      <p style="font-size: 12px">Uploaded by ${media.user.name} on ${date.toDateString()}</p>
-      <p style="font-size: 12px">Assigned on ${assigned_date.toDateString()}, ${deadline_text}</p>
       <p style="font-size: 12px">Correct choices are <u>underlined</u>.</p>
       <input id="skipper" type="button" value="Skip Video" onclick="skip_video();" disabled/>
       <input id="answers_button" type="button" value="Answer Questions" onclick="answer_questions();" disabled/>
@@ -175,10 +172,6 @@ function openPopup(assignment) {
         </select>
         <label id="custom_speed_label" style="font-size: 12px" for="custom_speed"></label>
         <input type="range" id="custom_speed" name="custom_speed" value="1" min="0.1" max="16" step="0.1" oninput="video_speed()" hidden>
-      </div>
-      <div id="options_container">
-        <label for="pause_on_focus" style="font-size: 12px">Don't pause on unfocus: </label>
-        <input type="checkbox" id="pause_on_focus" name="pause_on_focus" onchange="toggle_unfocus();">
       </div>
     </div>
   </div>
